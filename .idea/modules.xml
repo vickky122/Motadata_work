@@ -4,6 +4,7 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/Arrays/BookingApp/BookingApp.iml" filepath="$PROJECT_DIR$/Arrays/BookingApp/BookingApp.iml" />
       <module fileurl="file://$PROJECT_DIR$/LinkedList/BrowserTab/BrowserTab.iml" filepath="$PROJECT_DIR$/LinkedList/BrowserTab/BrowserTab.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ChatApp/ChatApp.iml" filepath="$PROJECT_DIR$/ChatApp/ChatApp.iml" />
       <module fileurl="file://$PROJECT_DIR$/DS.iml" filepath="$PROJECT_DIR$/DS.iml" />
       <module fileurl="file://$PROJECT_DIR$/LinkedList/PlaylistManager/PlaylistManager.iml" filepath="$PROJECT_DIR$/LinkedList/PlaylistManager/PlaylistManager.iml" />
       <module fileurl="file://$PROJECT_DIR$/Arrays/VideoStreaming/VideoStreaming.iml" filepath="$PROJECT_DIR$/Arrays/VideoStreaming/VideoStreaming.iml" />
