@@ -1,19 +1,21 @@
 package model;
 
+import java.util.List;
+
 public class Book {
     private final String isbn;
     private final String title;
-    private final String author;
+    private final List<String> authors;
     private final int year;
     private final String category;
     private int copies;
 
-    public Book(String isbn, String title , String author,int year, String category,int copies){
+    public Book(String isbn, String title , List<String> authors,int year, String category,int copies){
         if(isbn==null || isbn.isEmpty()) throw new IllegalArgumentException("ISBN cannot be null or empty");
         if(title==null || title.isEmpty()) throw new IllegalArgumentException("Title cannot be null or empty");
         this.isbn=isbn;
         this.title=title;
-        this.author=author;
+        this.authors=authors;
         this.year=year;
         this.category=category;
         this.setCopies(copies);
@@ -28,8 +30,8 @@ public class Book {
         return title;
     }
 
-    public String getAuthor() {
-        return author;
+    public List<String> getAuthor() {
+        return authors;
     }
 
     public int getYear() {
@@ -50,7 +52,7 @@ public class Book {
 
     @Override
     public String toString() {
-        return "[" + isbn + "] " + title + " by " + author +
+        return "[" + isbn + "] " + title + " by " + authors +
                 " (" + year + ") | " + category + " | Copies: " + copies;
     }
 }

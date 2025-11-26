@@ -4,6 +4,8 @@ import catalog.LibraryCatalog;
 import model.Book;
 import service.LibraryService;
 
+import java.util.Arrays;
+import java.util.List;
 import java.util.Scanner;
 
 public class LibraryApp {
@@ -36,8 +38,11 @@ public class LibraryApp {
                     System.out.print("Title: ");
                     String title = sc.nextLine();
 
-                    System.out.print("Author: ");
-                    String author = sc.nextLine();
+                    System.out.print("Authors (comma-separated: ");
+                    String authorInput = sc.nextLine();
+                    List<String> authors = Arrays.stream(authorInput.split(","))
+                            .map(String::trim)
+                            .toList();
 
                     System.out.print("Year: ");
                     int year = sc.nextInt();
@@ -50,7 +55,7 @@ public class LibraryApp {
                     int copies = sc.nextInt();
                     sc.nextLine();
 
-                    boolean added = service.addNewBook(isbn, title, author, year, category, copies);
+                    boolean added = service.addNewBook(isbn, title, authors, year, category, copies);
                     System.out.println(added ? "Book added successfully!" : "Book already exists!");
                 }
 

@@ -12,9 +12,9 @@ public class LibraryService {
         this.catalog=catalog;
     }
 
-    public boolean addNewBook(String isbn, String title, String author,int year,String category,int copies){
+    public boolean addNewBook(String isbn, String title, List<String> authors,int year,String category,int copies){
         if(catalog.exists(isbn)) return false;
-        Book book=new Book(isbn,title,author,year,category,copies);
+        Book book=new Book(isbn,title,authors,year,category,copies);
         return catalog.addBook(book);
     }
 
