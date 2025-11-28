@@ -16,7 +16,7 @@ public class UrlShortenerApp {
         IdGenerator idGenerator = new IdGenerator();
         Base62Encoder encoder = new Base62Encoder();
 
-        String baseDomain = "https://motadata";
+        String baseDomain = "https://motadata/";
 
         UrlShortenerService service = new UrlShortenerService(repository, idGenerator, encoder, baseDomain);
 

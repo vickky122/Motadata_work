@@ -62,8 +62,8 @@ public class UrlShortenerService {
     }
     private String extractShortCode(String shortUrlorCode){
         String trimmed=shortUrlorCode.trim();
-        if(!trimmed.startsWith(baseDomain)){
-            throw new IllegalArgumentException("Invalid short URL");
+        if(trimmed.startsWith(baseDomain)){
+            return trimmed.substring(baseDomain.length());
         }
         return trimmed;
     }
