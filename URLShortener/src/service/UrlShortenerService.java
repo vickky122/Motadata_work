@@ -18,6 +18,10 @@ public class UrlShortenerService {
             throw new IllegalArgumentException("Base domain cannot be null or blank");
         }
 
+        if(!baseDomain.endsWith("/")){
+            baseDomain+="/";
+        }
+
         this.urlRepository = urlRepository;
         this.idGenerator = idGenerator;
         this.base62Encoder = base62Encoder;
