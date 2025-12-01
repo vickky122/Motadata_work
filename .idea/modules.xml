@@ -9,6 +9,7 @@
       <module fileurl="file://$PROJECT_DIR$/LibraryApp/LibraryApp.iml" filepath="$PROJECT_DIR$/LibraryApp/LibraryApp.iml" />
       <module fileurl="file://$PROJECT_DIR$/LinkedList/PlaylistManager/PlaylistManager.iml" filepath="$PROJECT_DIR$/LinkedList/PlaylistManager/PlaylistManager.iml" />
       <module fileurl="file://$PROJECT_DIR$/ShoppingCart/ShoppingCart.iml" filepath="$PROJECT_DIR$/ShoppingCart/ShoppingCart.iml" />
+      <module fileurl="file://$PROJECT_DIR$/TaskScheduler/TaskScheduler.iml" filepath="$PROJECT_DIR$/TaskScheduler/TaskScheduler.iml" />
       <module fileurl="file://$PROJECT_DIR$/URLShortener/URLShortener.iml" filepath="$PROJECT_DIR$/URLShortener/URLShortener.iml" />
       <module fileurl="file://$PROJECT_DIR$/Arrays/VideoStreaming/VideoStreaming.iml" filepath="$PROJECT_DIR$/Arrays/VideoStreaming/VideoStreaming.iml" />
     </modules>
