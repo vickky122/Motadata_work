@@ -2,16 +2,15 @@ package service;
 
 import model.Task;
 
-import java.util.ArrayList;
-import java.util.Comparator;
-import java.util.List;
-import java.util.PriorityQueue;
+import java.util.*;
 
 public class TaskSchedulerService {
 
     private final PriorityQueue<Task> taskQueue;
 
     private long sequence=0L;
+
+    private final Set<Integer> existingTaskIds=new HashSet<>();
 
     public TaskSchedulerService(){
         this.taskQueue=new PriorityQueue<>(new Comparator<Task>() {
@@ -30,10 +29,14 @@ public class TaskSchedulerService {
         if (priority <= 0) {
             throw new IllegalArgumentException("Priority must be a positive integer (1 = highest).");
         }
+        if(existingTaskIds.contains(id)){
+            throw new IllegalArgumentException("Task ID already exists.");
+        }
 
         long createdAt = ++sequence;
         Task task = new Task(id, name, priority, createdAt);
         taskQueue.offer(task);
+        existingTaskIds.add(id);
         return task;
     }
     public boolean hasPendingTasks(){
